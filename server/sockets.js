@@ -36,7 +36,7 @@ function getBoard(name) {
 
 
 function getConnectedSockets() {
-	return Object.values(io.of("/").connected);
+	return Object.values(io.of("https://whiteboard.aimxcel.in/").connected);
 }
 
 function socketConnection(socket) {

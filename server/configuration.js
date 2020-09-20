@@ -3,16 +3,16 @@ const app_root = path.dirname(__dirname); // Parent of the directory where this 
 
 module.exports = {
     /** Port on which the application will listen */
-    PORT: parseInt(process.env['PORT']) || 8080,
+    PORT: parseInt(process.env['PORT']) || 9090,
 
     /** Use HTTPS */
     HTTPS: process.env['HTTPS'] || false,
 
-    PRIVATE_KEY_PATH:  "../../../../ssl/private.key",
+    PRIVATE_KEY_PATH:  "../../../../etc/ssl/aimxcelsslpvt.key",
 
-    CERTIFICATE_PATH: "../../../../ssl/certificate.crt",
+    CERTIFICATE_PATH: "../../../../etc/ssl/aimxcelin.crt",
 
-    CA_BUNDLE_PATH: "../../../../ssl/ca_bundle.crt",
+    CA_BUNDLE_PATH: "../../../../etc/ssl/aimxcelinca.crt",
 
      /** Save board data */
      SAVE_BOARDS: process.env['SAVE_BOARDS'] || false,

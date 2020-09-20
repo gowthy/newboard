@@ -18,7 +18,7 @@ if(config.HTTPS){
 		ca : fs.readFileSync(path.join(__dirname, config.CA_BUNDLE_PATH))
 	}
 };
-
+console.log("key path: "+path.join(__dirname, config.PRIVATE_KEY_PATH));
 var app =(config.HTTPS ? require('https').createServer(https,handler) : require('http').createServer(handler));
 
 var MIN_NODE_VERSION = 10.0;
