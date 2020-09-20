@@ -32,7 +32,7 @@
 	};
 
 	function clearBoard(evt) {
-		if($("#menu").width()>Tools.menu_width+3)return;
+		/* if($("#menu").width()>Tools.menu_width+3)return; */
         if(evt)evt.preventDefault();
 		Tools.acceptMsgs = false;
 		draw(msg, true);
