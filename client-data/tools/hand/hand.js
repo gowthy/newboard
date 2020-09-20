@@ -44,9 +44,9 @@
 		pressed = false;
 	}
 
-	Tools.add({ //The new tool
+	/* Tools.add({ //The new tool
 		// "name": "Hand",
-	"icon": "↑ Selection",  /* ✋ */
+	"icon": "↑ Selection", ✋ /*  
         "name": "Hand",
 		//"icon": "",
 		"shortcuts": {
@@ -58,8 +58,8 @@
 			"release": release
 		},
 		"mouseCursor": "move"
-	});
+	}); */
 
 	//The hand tool is selected by default
-	Tools.change("Hand");
+//	Tools.change("Hand");
 })(); //End of code isolation

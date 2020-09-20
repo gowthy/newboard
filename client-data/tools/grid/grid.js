@@ -34,7 +34,7 @@
 	};
 
 	function toggleGrid(evt) {
-		if($("#menu").width()>Tools.menu_width+3)return;
+		/* if($("#menu").width()>Tools.menu_width+3)return; */
         	if(evt)evt.preventDefault();
 		if(toggle){
 			toggle=0;

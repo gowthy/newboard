@@ -49,23 +49,28 @@
 	function onStart(evt){
 		curText.oldSize=Tools.getSize();
 		Tools.setSize(curText.rawSize);
+		console.log("in text start" +curText.rawSize);
 	};
 
 	function onQuit(){
 		Tools.setSize(curText.oldSize);
 	};
 
-	function clickHandler(x, y, evt, isTouchEvent) {
-		if($("#menu").width()>Tools.menu_width+3)return;
+	function clickHandler(x, y, evt) {
+		evt.preventDefault();
+		console.log("Tools width: "+Tools.menu_width);
+		/* if($("#menu").width()>Tools.menu_width+3)return; */
+
 		if (evt.target == input) return;
 		if (evt.target.tagName === "text") {
 			editOldText(evt.target);
 			evt.preventDefault();
 			return;
 		}
+		console.log("in text click");
 		curText.rawSize = Tools.getSize();
 		curText.size = parseInt(curText.rawSize * 1.5 + 12);
-		curText.opacity = Tools.getOpacity();
+		/* curText.opacity = Tools.getOpacity(); */
 		curText.color = Tools.getColor();
 		curText.x = x;
 		curText.y = y + curText.size / 2;
