@@ -32,7 +32,7 @@
 	 var icons = {
 		
 			"Rectangle":{
-				icon:"", /* ▢ */
+				icon:"▢", /* ▢ */
 				isHTML:false,
 				isSVG:false
 			},
@@ -257,9 +257,11 @@
 
 	var changeButtonIcon = function(){
 		if(icons[curshape].isHTML){
-			button.getElementsByClassName("tool-icon")[0].innerHTML = icons[curshape].icon;
+			console.log('shape = '+curshape)
+			button.getElementsByClassName("tool-icon")[0].innerHTML = '<p>Ellipse </p>'+ icons[curshape].icon;
 		}else{
-			button.getElementsByClassName("tool-icon")[0].textContent = icons[curshape].icon;
+			console.log('hello = '+curshape)
+			button.getElementsByClassName("tool-icon")[0].textContent = curshape +' '+ icons[curshape].icon;
 		}
 	};
 
@@ -308,10 +310,11 @@
 	};
 
 	Tools.add({ //The new tool
-		// "name": "Rectangle",
-		 "icon": " Geometry ▼",
+		 "name": "Rectangle",
+		 "icon": "Rectangle ▢",
 		"name": "Rectangle",
 		"title": "Shapes",
+		"style":"margin-top:5% !important;, margin-left:18% !important;",
 		"listeners": {
 			"press": start,
 			"move": move,
@@ -324,13 +327,14 @@
         },
 		"menu":{
 			"title": 'Shapes',
-			"content": `<div class="tool-extra submenu-rect" id="submenu-rect-Rectangle">
-							<span title = "rectangle" class="tool-icon">▢</span>
+			"content": `<div class="tool-extra submenu-rect" id="submenu-rect-Rectangle" style="width:50%;">
+							<span title = "rectangle" class="tool-icon">Rectangle ▢</span>
 						</div>
-						<div class="tool-extra submenu-rect" id="submenu-rect-Circle">
-							<span title = "circle" class="tool-icon">◯</span>
+						<div class="tool-extra submenu-rect" id="submenu-rect-Circle" style="width:50%;">
+							<span title = "circle" class="tool-icon">Circle ◯</span>
 						</div>
-						<div class="tool-extra submenu-rect" id="submenu-rect-Ellipse">
+						<div class="tool-extra submenu-rect" id="submenu-rect-Ellipse" style="width:50%;">
+						<p>Ellipse </p>
 							<span title = "ellipse" class="tool-icon">` + icons["Ellipse"].icon + `</span>
 						</div>
 						<div style="width:143px;display:block" class="tool-extra"  id="submenu-rect-dashed">
@@ -341,5 +345,5 @@
 		"mouseCursor": "crosshair",
 		"stylesheet": "tools/rect/rect.css"
 	});
-
+	$('#popover-Rectangle').css('margin-top','4%').css('margin-left','18%')
 })(); //End of code isolation
