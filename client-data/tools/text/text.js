@@ -213,7 +213,8 @@
 
 	Tools.add({ //The new tool
 		// "name": "Text",
-		 "icon": "T Text",
+		 "icon": "T",
+		 "iconHTML":"<i style='color: #000;margin-top:6px' class='fa fa-font'></i>",
         "name": "Text",
         //"icon": "",
 		"listeners": {

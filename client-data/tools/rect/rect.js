@@ -33,11 +33,13 @@
 		
 			"Rectangle":{
 				icon:"▢", /* ▢ */
+				"iconHTML":"<i style='color: #d60606;margin-top:6px' class='fa fa-square-o'></i>",
 				isHTML:false,
 				isSVG:false
 			},
 			"Circle":{
 					icon:"◯",
+					"iconHTML":"<i style='color: #d60606;margin-top:6px' class='fa fa-circle-thin'></i>",
 					isHTML:false,
 					isSVG:false
 			},
@@ -258,10 +260,10 @@
 	var changeButtonIcon = function(){
 		if(icons[curshape].isHTML){
 			console.log('shape = '+curshape)
-			button.getElementsByClassName("tool-icon")[0].innerHTML = '<p>Ellipse </p>'+ icons[curshape].icon;
+			button.getElementsByClassName("tool-icon")[0].innerHTML = /* '<p>Ellipse </p>'+  */icons[curshape].icon;
 		}else{
 			console.log('hello = '+curshape)
-			button.getElementsByClassName("tool-icon")[0].textContent = curshape +' '+ icons[curshape].icon;
+			button.getElementsByClassName("tool-icon")[0].textContent = /* curshape +' '+ */ icons[curshape].icon;
 		}
 	};
 
@@ -311,7 +313,8 @@
 
 	Tools.add({ //The new tool
 		 "name": "Rectangle",
-		 "icon": "Rectangle ▢",
+		 "icon": "▢",
+		 "iconHTML":"<i style='color: #d60606;margin-top:6px' class='fa fa-square-o'></i>",
 		"name": "Rectangle",
 		"title": "Shapes",
 		"style":"margin-top:5% !important;, margin-left:18% !important;",
@@ -328,13 +331,13 @@
 		"menu":{
 			"title": 'Shapes',
 			"content": `<div class="tool-extra submenu-rect" id="submenu-rect-Rectangle" style="width:50%;">
-							<span title = "rectangle" class="tool-icon">Rectangle ▢</span>
+							<span title = "rectangle" class="tool-icon">▢</span>
 						</div>
 						<div class="tool-extra submenu-rect" id="submenu-rect-Circle" style="width:50%;">
-							<span title = "circle" class="tool-icon">Circle ◯</span>
+							<span title = "circle" class="tool-icon">◯</span>
 						</div>
 						<div class="tool-extra submenu-rect" id="submenu-rect-Ellipse" style="width:50%;">
-						<p>Ellipse </p>
+						
 							<span title = "ellipse" class="tool-icon">` + icons["Ellipse"].icon + `</span>
 						</div>
 						<div style="width:143px;display:block" class="tool-extra"  id="submenu-rect-dashed">

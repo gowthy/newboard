@@ -31,7 +31,7 @@
 	
 	var currShape = null;
 	var curTool = "single";
-	var icons = ["<i style='color: #e75480;margin-top:7px' class='fas fa-skull-crossbones'></i>","<i style='color: black;margin-top:7px' class='fas fa-skull-crossbones'></i>",];
+	var icons = ["<i style='color: #e75480;margin-top:7px' class='fas fa-trash'></i>","<i style='color: black;margin-top:7px' class='fas fa-trash'></i>",];
 	var end = false;
 	var lastTime = performance.now(); //The time at which the last point was drawn
 	var makeRect = false;
@@ -352,7 +352,7 @@
 			elem.getElementsByClassName("tool-icon")[0].innerHTML = icons[index];
 	};
 
-	/* Tools.add({ //The new tool
+	 Tools.add({ //The new tool
 		"name": "Remove",
 		"icon": "?",
 		"iconHTML":icons[0],
@@ -368,6 +368,6 @@
         },
 		"draw": draw,
 		"mouseCursor": "crosshair",
-	}); */
+	}); 
 
 })(); //End of code isolation

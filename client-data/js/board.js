@@ -76,7 +76,7 @@ Tools.connect = function() {
     self.socket = null;
   }
 
-  this.socket = io.connect('https://whiteboard.aimxcel.in', {
+  this.socket = io.connect(':8080', {
 	"reconnection" : true,
 	"reconnectionDelay": 100, //Make the xhr connections as fast as possible
 	"timeout": 1000 * 60 * 20 // Timeout after 20 minutes
@@ -126,12 +126,18 @@ Tools.connect();
 
 
 Tools.boardName = (function () {
+	var x = Math.floor((Math.random() * 1000) + 1);
 	var path = window.location.search.split("?board=");
 	if(path.length!=1){
-		return path[1];
+		console.log("path: "+path[1]+x);
+		return path[1]+x;
+		
 	}
+	
 	path = window.location.pathname.split("/");
+	console.log("boardname: "+path[path.length-1]+x);
 	return path[path.length - 1];
+
 })();
 
 

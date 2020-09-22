@@ -40,7 +40,7 @@
 		 
 		var icons = {
 			"line":{
-				icon:"",   /* ☇ */
+				icon:"☇",   /* ☇ */
 				isHTML:false,
 				isSVG:false
 			},
@@ -383,7 +383,7 @@
 
 	Tools.add({ //The new tool
 		// "name": "Straight line",
-		 "icon": "☇ Line", /* ☇ */
+		 "icon": "☇", /* ☇ */
 		 "title":"Lines",
         "name": "Line",
         //"icon": "",

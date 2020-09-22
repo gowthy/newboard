@@ -65,7 +65,8 @@ function draw(msg) {
 
 Tools.add({
     "name": "Document",
-    "icon": "🖼️ Picture", /* 🖼️ */
+    "icon": "🖼️", /* 🖼️ */
+    "iconHTML":"<i style='color: #3D9970;margin-top:6px' class='fa fa-download'></i>",
     "shortcuts": {
         "changeTool":"7"
     },

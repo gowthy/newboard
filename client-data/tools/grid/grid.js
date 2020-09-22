@@ -65,7 +65,7 @@
 	Tools.add({ //The new tool
 		"name": "Grid",
 		"icon": "🗑",
-		"iconHTML":"<i style='color:gray;margin-top:7px'  class='fas fa-th'>Grid</i>",
+		"iconHTML":"<i style='color:gray;margin-top:7px'  class='fas fa-th'></i>",
 		"shortcuts": {
             "actions":[{"key":"9","action":toggleGrid}],
         },

@@ -54,7 +54,8 @@
 
 	Tools.add({ //The new tool
 		"name": "Clear",
-		"icon": "🗑 Clear",
+		"icon": "🗑",
+		"iconHTML":"<i style='color: #d60606;margin-top:6px' class='fa fa-trash'></i>",
 		"shortcuts": {
             "actions":[{"key":"shift-C","action":clearBoard}]
         },

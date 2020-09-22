@@ -69,7 +69,7 @@ html, body, svg {
 	height:100%;
 	/*width:300px;*/
 	transition-duration:1s;
-	padding: 10px;
+	/* padding: 10px; */
 	z-index:98;
 }
 #menuBottom {
@@ -86,7 +86,7 @@ html, body, svg {
 	height:100%;
 	/*width:300px;*/
 	transition-duration:1s;
-	padding: 10px;
+	/* padding: 10px; */
 	z-index:98;
 }
 #menu.closed {
@@ -139,9 +139,9 @@ html, body, svg {
 	border:1px solid #eeeeee;
 	text-decoration:none;
 	cursor:pointer;
-	background: #F6F7F8;
+	background: #fff;
 	/*margin-top: 10px;*/
-	height: 45px;
+	height: 40px;
 	line-height: 40px;
 	border-radius: 3px;
 	/* max-width: 80px; */
@@ -227,7 +227,7 @@ html, body, svg {
 .menu .tool-icon {
 	display: inline-block;
 	text-align:center;
-	font-size:1.2vw;
+	font-size:2vw;
 	width: max-content;
 	margin-left: 5px;
 	margin-right: 26px;
@@ -236,6 +236,7 @@ html, body, svg {
 	height: 100%;
 	margin: 0px 26px auto 4px;
 	font-family: sans-serif;
+	padding-left:0.5vw;
 }
 
 .menu .tool-icon > * {

@@ -184,7 +184,7 @@
 	<div id="menu" class="menu" style="width: 100%;height: 10%;">
 		<div id="menuItems" class="d-flex flex-row" style="width: 100%;height: 10%;">
 			<ul id="tools" class="d-flex flex-row tools">
-				<li style="height: 45px;line-height: 40px;background-color: #1c1565;"><label
+				<li style="height: 40px;line-height: 40px;background-color: #1c1565;"><label
 						style="color:white;margin-bottom: 0px;padding: 0.2vw;font-weight: bold;">Aimxcel
 						Whiteboard</label></li>
 				<li class="tool"><span class="tool-icon"></span></li>
@@ -194,14 +194,14 @@
 
 
 			</ul>
-			<button id="saveAsImageBtn" title="Save whiteboard as image" type="button" style="height: 33px;">
-				Save
+			<button class="tool" id="saveAsImageBtn" title="Save whiteboard as image" type="button">
+				<span class="tool-icon"><i style='color: #4e3ef3;margin-top:6px' class='fa fa-upload'></i></span>
 			</button>
 
 			<ul class="d-flex flex-row tools" id="settings">
 
-				<li class="tool-popout">
-					<!-- 	<span style="outline:none !important" class="tool-icon-popout" tabindex=1  data-toggle="popover"  data-content="Some content inside the popover">
+				<!--<li class="tool-popout">
+					 	<span style="outline:none !important" class="tool-icon-popout" tabindex=1  data-toggle="popover"  data-content="Some content inside the popover">
 						<i style='color: #0074D9;margin-top:7px' class='fas fa-angle-double-right'></i>
 					</span> -->
 
@@ -239,13 +239,13 @@
 							<input type="range" id="chooseOpacity" value="1" min="0.2" max="1" step="0.1"
 								class="rangeChooser" />
 						</label> 
-					</li> -->
-				</li>
+					</li> 
+				</li>-->
 
 			</ul>
 		</div>
 	</div>
-	<div id="menuBottom" class="menu" style="width: 50%;height: 10%;">
+	<div id="menuBottom" class="menu" style="width: 25%;height: 10%;">
 		<li class="tool"><span class="tool-list" id="tool-list">
 				<div class="tool-extra"><span class="tool-icon"></span></div>
 			</span></li>

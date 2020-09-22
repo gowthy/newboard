@@ -453,7 +453,7 @@
 
 	Tools.add({ //The new tool
 		"name": "Transform",
-		"icon": "? Transform",  /* ?*/
+		"icon": "?",  /* ?*/
 		"iconHTML":icons[0],
 		/* "toggle":toggle, */
 

@@ -273,7 +273,8 @@
 
 	Tools.add({ //The new tool
 		// "name": "Pencil",
-		 "icon": "✎ Write",
+		 "icon": "✎",
+		 "iconHTML":"<i style='color: #3D9970;margin-top:6px' class='fa fa-pencil'></i>",
 		"name": "Pencil",
 		"title":"Pencil",
 		"listeners": {
