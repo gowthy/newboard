@@ -3,7 +3,7 @@ const app_root = path.dirname(__dirname); // Parent of the directory where this 
 
 module.exports = {
     /** Port on which the application will listen */
-    PORT: parseInt(process.env['PORT']) || 8080,
+    PORT: parseInt(process.env['PORT']) || 9090,
 
     /** Use HTTPS */
     HTTPS: process.env['HTTPS'] || false,
