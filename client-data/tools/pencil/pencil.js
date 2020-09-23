@@ -287,7 +287,7 @@
             "changeTool":"1"
         },
 		"draw": draw,
-		"toggle":toggle,
+		/* "toggle":toggle, */
 		"onstart":onStart,
 		"onquit":onQuit,
 		"mouseCursor": "crosshair",

@@ -76,7 +76,7 @@ Tools.connect = function() {
     self.socket = null;
   }
 
-  this.socket = io.connect('https://whiteboard.aimxcel.in', {
+  this.socket = io.connect(':8080', {
 	"reconnection" : true,
 	"reconnectionDelay": 100, //Make the xhr connections as fast as possible
 	"timeout": 1000 * 60 * 20 // Timeout after 20 minutes
@@ -106,11 +106,11 @@ Tools.connect = function() {
 		}
 	}
 
-	if(loading){
+	/* if(loading){
 		var loadingEl = document.getElementById("loadingMessage");
 		loadingEl.classList.add("hidden");
 		loading=false;
-	}
+	} */
 	
   });
 
@@ -597,6 +597,7 @@ Tools.send = function (data, toolName) {
 	var d = data;
 	d.tool = toolName;
 	Tools.applyHooks(Tools.messageHooks, d);
+	console.log("in tool send");
 	var message = {
 		"board": Tools.boardName,
 		"data": d

@@ -32,7 +32,9 @@
 	};
 
 	function undo(evt) {
+		console.log("in undo");
 		if(evt)evt.preventDefault();
+		console.log("after prevent");
 		draw(msg);
 		Tools.send(msg,"Undo");
 	};
