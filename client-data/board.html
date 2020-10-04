@@ -17,7 +17,7 @@
 
 	<meta name="description" content="A free and opensource online collaborative drawing tool." />
 	<meta name="keywords" content="Collaborative whiteboard,online,draw,paint,shared,realtime" />
-	<link rel="apple-touch-icon" href="/favicon.svg">
+	<link rel="apple-touch-icon" href="favicon.ico.png">
 	<style>
 		.modal-backdrop {
 			opacity: 0.25 !important;
@@ -323,17 +323,25 @@
 	<script src="tools/zoom-out/zoom-out.js"></script>
 	<script src="components/measurement/measurement.js"></script>
 	<script src="js/canvascolor/canvascolor.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/canvg.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/rgbcolor.min.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	<script>
 		$("#saveAsImageBtn")
 			.off("click")
 			.click(function () {
-				var svgImage = $('#board').children('svg')[0];
-				console.log(svgImage.height.animVal.value);
-
-				var serializer = new XMLSerializer();
+				/* var svgImage = $('#board').children('svg')[0];
+				console.log(svgImage.height.animVal.value); */
+				var container = document.getElementById("board");
+			//var container = document.body; // full page 
+			html2canvas(container).then(function(canvas) {
+                var link = document.createElement("a");
+                document.body.appendChild(link);
+                link.download = "abclearn_whiteboard.png";
+                link.href = canvas.toDataURL("image/png");
+                link.target = '_blank';
+                link.click();
+            });
+				/* var serializer = new XMLSerializer();
 				var str = serializer.serializeToString(svgImage);
 
 				var $canvas = $('<canvas/>');
@@ -351,7 +359,7 @@
 						a.click();
 						$canvas.remove();
 					}
-				});
+				}); */
 			});
 	</script>
 
