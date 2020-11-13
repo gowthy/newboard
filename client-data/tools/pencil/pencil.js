@@ -274,7 +274,7 @@
 	Tools.add({ //The new tool
 		// "name": "Pencil",
 		 "icon": "✎",
-		 "iconHTML":"<i style='color: #3D9970;margin-top:6px' class='fa fa-pencil'></i>",
+		 "iconHTML":"<i style='color: black;margin-top:6px' class='fa fa-pencil'></i>",
 		"name": "Pencil",
 		"title":"Pencil",
 		"listeners": {

@@ -26,7 +26,7 @@
 
 (function grid() { //Code isolation
 
-	var toggle=1; //grid on by default
+	var toggle=0; //grid on by default
 	var msg = {
 		"type": "grid",
 		"id":"",
@@ -65,7 +65,7 @@
 	Tools.add({ //The new tool
 		"name": "Grid",
 		"icon": "🗑",
-		"iconHTML":"<i style='color:gray;margin-top:7px'  class='fas fa-th'></i>",
+		"iconHTML":"<i style='color:purple;margin-top:7px'  class='fas fa-th'></i>",
 		"shortcuts": {
             "actions":[{"key":"9","action":toggleGrid}],
         },

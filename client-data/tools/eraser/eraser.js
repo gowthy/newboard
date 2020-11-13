@@ -31,7 +31,7 @@
 	
 	var currShape = null;
 	var curTool = "single";
-	var icons = ["<i style='color: #e75480;margin-top:7px' class='fas fa-trash'></i>","<i style='color: black;margin-top:7px' class='fas fa-trash'></i>",];
+	var icons = ["<i style='color: #e75480;margin-top:7px' class='fas fa-cut'></i>","<i style='color: black;margin-top:7px' class='fas fa-cut'></i>",];
 	var end = false;
 	var lastTime = performance.now(); //The time at which the last point was drawn
 	var makeRect = false;
